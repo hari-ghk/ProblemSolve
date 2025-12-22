@@ -19,13 +19,11 @@ public class GraphCreation {
         for(int i = 0; i < edgesArray.length; ++i){
             u = Integer.parseInt(edgesArray[i].split(" ")[0].trim());
             v = Integer.parseInt(edgesArray[i].split(" ")[1].trim());
-            System.out.println("u:" + u);
-            System.out.println("v:" + v);
             graph.get(u).add(v);
             if(isUndirected)
                 graph.get(v).add(u);
         }
-        //printGraph(graph);
+        printGraph(graph);
         return graph;
     }
 
